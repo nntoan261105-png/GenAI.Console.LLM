@@ -12,9 +12,9 @@ jobs:
           dotnet-version: '8.0.x'
           cache: false
       - name: Restore
-        run: dotnet restore DemoUnitTest_ConsoleApp.sln
+        run: dotnet restore DemoUnitTest_ConsoleApp.slnx
       - name: Build
-        run: dotnet build DemoUnitTest_ConsoleApp.sln --configuration Release --no-restore
+        run: dotnet build DemoUnitTest_ConsoleApp.slnx --configuration Release --no-restore
       - name: Test + coverage
         run: >
           dotnet test UnitTest/UnitTest.csproj
